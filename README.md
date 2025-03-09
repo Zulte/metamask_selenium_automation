@@ -70,7 +70,7 @@ pip install -r requirments.txt
 ## Usage
 Below is a sample snippet on how to use the module:
 
-```
+```python
 from selenium import webdriver
 from your_module_name import Metamask  # Replace with the actual module name
 
@@ -95,31 +95,49 @@ driver.quit()
 ## Module Overview
 The module is structured around the Metamask class which includes the following methods:
 
-``` __init__(self, driver)```
+```python
+ __init__(self, driver)
+```
 Initializes the module with a Selenium WebDriver instance and sets up logging.
 
-```_click_element(self, element)```
+```python 
+_click_element(self, element)
+```
 A helper method to click elements using an XPath.
 
-```login_to_metamask(self, recovery_words)```
+```python
+login_to_metamask(self, recovery_words)
+```
 Automates the login process by navigating through MetaMask’s onboarding flow, entering the recovery phrase, and setting a password.
 
-```register_new_wallet(self)```
+```python
+register_new_wallet(self)
+```
 Automates the process of registering a new wallet. It guides through the setup process and retrieves the generated recovery phrase.
 
-```approve_connect(self)```
+```python
+approve_connect(self)
+```
 Iterates through browser windows to find and approve connection requests by clicking the appropriate confirmation button.
 
-```switch_network(self)```
+```python
+switch_network(self)
+```
 Switches the MetaMask network by navigating to network settings, entering the password, and using JavaScript to trigger the network change.
 
-```connect(self)```
+```python
+connect(self)
+```
 Executes JavaScript across open browser windows to approve a generic connection request.
 
-```sign_in(self)```
+```python
+sign_in(self)
+```
 Automates the sign-in process by locating and clicking a 'Confirm' button.
 
-```pass_or_login(self, wallet)```
+```python
+pass_or_login(self, wallet)
+```
 Determines if a wallet is already set up by checking for a password input field; if not, it triggers the full login process using the provided recovery phrase.
 
 Each method includes error handling and logging, ensuring that issues are recorded and screenshots are captured when needed.
