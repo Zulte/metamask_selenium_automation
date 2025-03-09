@@ -95,7 +95,7 @@ driver.quit()
 ## Module Overview
 The module is structured around the Metamask class which includes the following methods:
 
-```__init__(self, driver)```
+```python __init__(self, driver)```
 Initializes the module with a Selenium WebDriver instance and sets up logging.
 
 ```_click_element(self, element)```
